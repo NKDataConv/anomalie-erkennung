@@ -1,14 +1,13 @@
 ## Anomalie-Erkennung in Echtzeit mit Kafka und Isolation Forests
 
-Dies ist das Repository für den Artikel.
+Dies ist das Repository für den Artikel "Anomalie-Erkennung in Echtzeit mit Kafka und Isolation Forests"
 
 **Wichtige Kommandos:**
 
-
 Git Repo clonen und Kafka Cluster starten
 ```
-git clone …
-cd docker
+git clone https://github.com/NKDataConv/anomalie-erkennung.git
+cd anomalie-erkennung/
 docker-compose -f ./kafka_cluster/docker-compose.yml up -d --build
 ```
 
@@ -17,7 +16,6 @@ Ein Test Topic anlegen, Nachrichten verschicken und empfangen
 docker-compose -f kafka_cluster/docker-compose.yml exec broker kafka-topics --create --bootstrap-server localhost:9092 --topic test-stream
 docker-compose -f kafka_cluster/docker-compose.yml exec broker kafka-console-producer --broker-list localhost:9092 --topic test-stream
 docker-compose -f kafka_cluster/docker-compose.yml exec broker kafka-console-consumer --bootstrap-server localhost:9092 --topic test-stream --from-beginning
-
 ```
 
 Kafka Producer mit Testdaten starten
