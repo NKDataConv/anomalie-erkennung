@@ -1,0 +1,6 @@
+confluent_kafka
+requests
+avro-python3
+joblib
+sklearn
+pandas
