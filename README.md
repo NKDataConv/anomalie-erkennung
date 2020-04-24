@@ -22,7 +22,6 @@ Kafka Producer mit Testdaten starten
 ```
 docker build ./producer -t kafka-producer
 docker run --network="kafka_cluster_default" -it kafka-producer
-
 ```
 
 Kafka Consumer für Training der Anomalie-Erkennung
@@ -35,7 +34,6 @@ Kafka Consumer für Auswertung der Anomalie-Erkennung
 ```
 docker build ./Consumer_Prediction -t kafka-consumer-prediction
 docker run --network="kafka_cluster_default" --volume $(pwd)/data:/data:ro -it kafka-consumer-prediction
-
 ```
 
 Skalieren der Anomalie-Erkennung

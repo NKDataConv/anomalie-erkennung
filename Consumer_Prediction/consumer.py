@@ -47,9 +47,9 @@ if __name__ == '__main__':
 
         # -1 corresponds to anomaly. Every anomaly is just printed and shown in docker logs.
         anomalie_timestamps = df[anomalie==-1].timestamp
-        for anomalie in anomalie_timestamps:
-            print(f'Anomalie zum Zeitpunkt {anomalie}')
-
+        if len(anomalie_timestamps)>0:
+            for anomalie in anomalie_timestamps:
+                print(f'Anomalie zum Zeitpunkt {anomalie}')
         else:
             print("Keine Anomalien.")
 
